@@ -1,0 +1,828 @@
+/* 整体 */
+.container {
+    width: 100%;
+    /* border: 1px solid #000; */
+    background-color: #F5F5F5;
+}
+/* 导航栏 */
+header .nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(51, 51, 51);
+    line-height: 50px;
+    color:rgb(204, 204, 204);
+    font-size: 12px; 
+    position: relative;
+}
+/* 导航栏左侧滚动 */
+header .nav .navleft {
+    margin-left: 73px;
+    position: relative;
+    overflow: hidden;
+    width: 220px;
+    height: 50px;
+    /* border: 1px solid red; */
+}
+header .nav .navleft .contro {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    /* background-color: green; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .nav .navleft .contro .controls:hover {
+    color: white;
+}
+/* 导航栏右侧文字 */
+header .nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 135px;  
+}
+header .nav li {
+    float:right;    
+}
+header .nav a {
+    font-size: 12px;
+    color:rgb(204, 204, 204);  
+}
+header .nav a:hover {
+    color: white;
+}
+/* 导航栏手机 */
+header .nav .phone {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    margin-right: 87px;
+}
+/* 导航栏二维码 */
+header.nav .mask {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+} 
+.mask::after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    top: -250px;
+    right: 92px;
+    transition: all 1s;
+}
+.mask:hover::after {
+    background-image: url('./imgs/二维码.jpg');
+    top: 50px;
+}
+/* 轮播图 */
+/* 轮播图上类别 */
+.banner .bannerTop {
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid #000; */
+    line-height: 100px;
+    margin-left: 75px;
+}
+/* logo */
+.banner .bannerTop .logo {
+    width: 205px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    float: left;
+}
+/* 图片 */
+.banner .bannerTop .logo .img {
+    float: left;
+    width: 66px;
+    height: 60px;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    margin: 14px 0px 27px 0px;
+    background-color: #1ABC9C;
+}
+.banner .bannerTop .logo .img img {
+    width: 40px;
+    height: 40px;
+    margin: 12px;
+}
+/* 标题 */
+.banner .bannerTop .logo .content {
+    position: relative;
+    width: 135px;
+    height: 60px;
+    float: right;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    margin: 14px 0px 27px 0px;
+ 
+}
+.banner .bannerTop .logo .content h1{
+    position: absolute;
+    top: -32px;
+    left: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #999999
+}
+.banner .bannerTop .logo .content span {
+    position: absolute;
+    font-size: 14px;
+    color: #BEBEBE;
+}
+/* 类别 */
+.banner .bannerTop .category {
+    position: relative;
+    width: 600px;
+    height: 63px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    float: left;
+    margin: 14px 0px 27px 0px;
+}
+/* 清除浮动 */
+.banner .bannerTop .category::after {
+    display: block;
+    content: '';
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+
+.banner .bannerTop .category li a{
+    height: 63px;
+    float: left;
+    color: #666666;
+    margin-right: 24px;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    font-weight: bold;
+}
+/* 清除浮动 */
+.banner .bannerTop .category li a::after {
+    display: block;
+    content: '';
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+
+.banner .bannerTop .category li a:hover {
+    color: #1ABC9C;
+    border-bottom: 3px solid #1ABC9C;
+}
+
+/* 搜索 */
+.banner .bannerTop .sel {
+    width: 250px;
+    height: 100px;
+    float: left;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    position: relative;
+}
+.banner .bannerTop .sel input {
+    position: absolute;
+    width: 230px;
+    height: 30px;
+    border: 1px solid  #666666;
+    top: 50%;
+    margin-top: -8px;
+    border-radius: 10px;
+}
+.banner .bannerTop .sel span {
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 30px;
+    color: #666666;
+}
+/* 购物车 */
+.banner .bannerTop .cart {
+    position: relative;
+    width: 136px;
+    height: 100%;
+    float: left;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    color: #666666;
+
+}
+.banner .bannerTop .cart img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: #666666;
+    top: 50%;
+    margin-top: -4px;
+}
+.banner .bannerTop .cart span {
+    position: absolute;
+    left: 25px;
+    top: 7px;
+}
+.select {
+    width: 1200px;
+    height: 1030px;
+    /* border: 1px solid #000; */
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    color: #999;
+}
+/* 我的购物车 */
+.select .che {
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid #000; */
+    line-height: 80px;
+    background-color: #F5F5F5;
+
+}
+.select .che p  {
+   position: absolute;
+}
+
+.select .commodity {
+    width: 100%;
+    height: 948px;
+    /* border: 1px solid #000; */
+}
+.select .commodity div {
+    float: left;
+}
+/* 第一行 */
+.select .commodity .fir {
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid #000; */
+    line-height: 80px;
+    text-align: center;
+    font-size: 14px;
+}
+/* 全选 */
+.select .commodity .fir .full {
+    width: 120px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+.select .commodity .fir .full span img {
+    position: relative;
+    top: 7px;
+    left: -10px;
+}   
+.select .commodity .fir .full span:last-child {
+    margin-left: -5px;
+}
+/* 商品信息 */
+.select .commodity .fir .product {
+    width: 438px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+/* 单价 */
+.select .commodity .fir .unitprice {
+    width: 140px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+/* 数量 */
+.select .commodity .fir .num {
+    width: 154px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+/* 小计 */
+.select .commodity .fir .subtotal {
+    width: 157px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+/* 操作 */
+.select .commodity .fir .operate {
+    width: 178px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+/* 第二行 */
+.select .commodity .sec{
+    width: 100%;
+    height: 140px;
+    /* border: 1px solid #000; */
+}
+/* 选择框 */
+.select .commodity .frame {
+    width: 120px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    
+}
+.select .commodity .frame img {
+    position: relative;
+    top: 55px;
+    left: 22px;
+}
+/* 图片介绍 */
+.select .commodity .pic {
+    width: 438px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    float: left;
+}
+.select .commodity .pic img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-top: 20px;
+}
+.select .commodity .pic .t1 {
+    font-size: 16px;
+    color: #656565;
+    margin-top: 24px;
+    margin-left: 120px;
+}
+.select .commodity .pic .t2 {
+    margin-top: 12px;
+    margin-left: 120px;
+}
+/* 价格 */
+.select .commodity .pri {
+    width: 140px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+.select .commodity .pri span {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+}
+/* 加减数量 */
+.select .commodity .subadd {
+    width: 155px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+.select .commodity .subadd .numb {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #E4E4E4;
+    /* border: 1px solid #000; */
+    position: relative;
+    top: 20px;
+    left: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+.select .commodity .subadd .numb span {
+    display: block;
+    width: 37px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    float: left;
+    color: #D1D1D1;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.select .commodity .subadd .numb span:nth-child(2) {
+    width: 56px;
+    color: #9A9A9A;
+    font-size: 16px;
+    font-weight: normal;
+    border-left: 1px solid #E4E4E4;
+    border-right: 1px solid #E4E4E4;
+}
+/* 合计 */
+.select .commodity .total {
+    width: 157px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    text-align: center;
+}
+.select .commodity .total span{
+    display: block;
+    color: #F64F3D;
+    margin-top: 24px;
+}
+/* 操作 */
+.select .commodity .star {
+    width: 178px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    text-align: center;
+}
+.select .commodity .star a {
+    display: block;
+    color: #656565;
+    font-size: 14px;
+    margin-top: 24px;
+}
+.select .commodity .star a:last-child {
+    margin-top: 10px;
+}
+/* 第三行 */
+.select .commodity .thr {
+    width: 100%;
+    height: 140px;
+    /* border: 1px solid #000; */
+}
+/* 第四行 */
+.select .commodity .four {
+    width: 100%;
+    height: 140px;
+    /* border: 1px solid #000; */
+}
+/* 第五行 */
+.select .commodity .five {
+    width: 100%;
+    height: 140px;
+    /* border: 1px solid #000; */
+}
+/* 失效产品 第六行*/
+.select .commodity .six {
+    width: 100%;
+    height: 140px;
+    /* border: 1px solid #000; */
+}
+.select .commodity .invalid {
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid #000; */
+    line-height: 50px;
+    color: #636363;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.select .commodity .pic .sell {
+    color: #DF513B;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-left: 120px;
+}
+/* 结算 */
+.select .commodity .settlement {
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid #000; */
+    margin-top: 23px;
+    position: relative;
+}
+/* 全选 */
+.select .commodity .settlement .full {
+    width: 120px;
+    height: 80px;
+    /* border: 1px solid #000; */
+    line-height: 80px;
+}
+.select .commodity .settlement .full span img {
+    position: relative;
+    top: 6px;
+    left: 20px;
+}   
+.select .commodity .settlement .full span:last-child {
+    margin-left: 20px;
+}
+.select .commodity .settlement .star1 {
+    width: 190px;
+    height: 80px;
+    line-height: 80px;
+    /* border: 1px solid #000; */
+}
+.select .commodity .settlement .star1 a {
+    color: #656565;
+    font-size: 14px;
+    margin-right: 16px;
+}
+.select .commodity .settlement .star1 a:last-child {
+    margin-right: 0px;
+}
+.select .commodity .settlement p {
+    width: 626px;
+    height: 100%;
+    line-height: 80px;
+    /* border: 1px solid #000; */
+    margin-left: 90px;
+    font-size: 14px;
+}
+.select .commodity .settlement p span{
+    color: #F14946;
+}
+.select .commodity .settlement p span.set {
+    font-size: 25px;
+    font-weight: bold;
+}
+.select .commodity .settlement button {
+    display: block;
+    width: 200px;
+    height: 80px;
+    background-color: #F14946;
+    border: 0px solid #000;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+    font-size: 18px;
+}
+/* 猜你喜欢 */
+.guess {
+    width: 1200px;
+    height: 400px;
+    border: 1px solid #E4E4E4;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: #fff;
+    padding-bottom: 40px;
+}
+.guess .t {
+    width: 1200px;
+    height: 50px;
+    /* border: 1px solid #000; */
+    line-height: 50px;
+}
+.guess .t .head {
+    font-size: 16px;
+    color: #999;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+/* 服装 中间图文 */
+.guess .box {
+    width: 100%;
+    height: 238px;
+    /* border: 1px solid red; */
+    padding: 20px 66px 0px 66px;
+}
+.guess .box .square {
+    width: 230px;
+    height: 328px;
+    float: left;
+    margin-right: 50px;
+    text-align: center;
+    color: #656565;
+    text-align: center;
+    border: 1px solid #E4E4E4;
+    background-color: #fff;
+
+}
+.guess .box .square:last-child {
+    margin-right: 0px;
+}
+/* square 里面第一部分部分布局*/
+.guess .box .square .img1 img {
+    margin-top: 0px;
+}
+.guess .box .square .title11 {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.guess .box .square .title12 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* 立减200元 */
+.guess .box .square .price1 {
+    width: 55px;
+    height: 55px;
+    background-color: #F04845;
+    border-radius: 50%;
+    text-align: center;
+    /* line-height: 60px; */
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: 30px;
+    left: 140px;
+}
+/* square 里面第二部分部分布局*/
+.guess .box .square .img img {
+    margin-top: 54px;
+}
+.guess .box .square .title1 {
+    margin-top: 50px;
+    font-size: 14px;
+}
+.guess .box .square .title2 {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.guess .box .square .price {
+    color: #E64D4F;
+    font-size: 14px;
+}
+/* 享9折 */
+.guess .box .square .discount {
+    width: 50px;
+    height: 20px;
+    display: block;
+    width: 50px;
+    height: 22px;
+    background-color: #E64D4F;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    top: -280px;
+    left: 90px;
+    margin-top: 20px;
+}
+/* 按钮 */
+.guess .box .btn {
+    position: relative;
+    text-align: center;
+}
+.guess .box .btn a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #EAEAEA;
+    position: absolute;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #999999;
+    font-weight: bold;
+    
+}
+.guess .box .btn .lt {
+    top: 145px;
+    left: -55px;
+}
+.guess .box .btn .gt {
+    top: 145px;
+    right: 75px;
+}
+/* footer top */
+.top {
+    width: 1400px;
+    height: 244px;
+    margin: 0 auto;
+    border-top: 1px solid #EDEDED;
+    margin-top: 50px;
+    color: #989898;
+    text-align: center;
+    /* position: relative;
+    left: 0px; */
+}
+.top .square {
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid #EDEDED;
+    float: left;
+    box-sizing: border-box;
+}
+.top .square:last-child {
+    border-right: 0px solid #EDEDED;
+}
+/* 客户服务 */
+.top .square .title1 {
+    margin-top: 50px;
+}
+.top .square .title2 {
+    width: 100%;
+    height: 84px;
+    /* border-right: 1px solid #EDEDED; */
+    margin-top: 26px;
+}
+.top .square .title2 div {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #EDEDED;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 66px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* 关注我们 */
+.top .square .title2 div:last-child {
+    margin-left: 10px;
+}
+/* hover出现图片 */
+/* .top .square .title2 div:last-child img:nth-child(2):hover {
+    background-color: #1ABC9C;
+} */
+/* 下载APP */
+.top .square .title2 .download {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #EDEDED;
+    margin: -8px 0px 0px 25px;
+}
+.top .square .title2 .download img {
+    width: 80px;
+    height: 80px;
+    margin: 0px;
+}
+/* 扫描查看 */
+.top .square .title2 .scan {
+    display: block;
+    font-size: 12px;
+    margin: 12px 50px 15px 154px;
+    text-align: left;
+}
+.top .square .title2 button {
+    display: block;
+    width: 90px;
+    height: 30px;
+    font-size: 12px;
+    border: 1px solid #EDEDED;
+    background-color: #fff;
+    margin: -9px 0px 0px 154px;
+    color: #989898;
+}
+/* 服务热线 */
+.top .square .title2 .tel {
+    font-weight: bold;
+    font-size: 18px;
+    color: #696969;
+}
+.top .square .title2 .week,.money {
+    font-size: 14px;
+}
+/* 版权 */
+.bottom {
+    width: 1400px;
+    height: 300px;
+    background-color: #333333;
+    position: relative;
+    left: 0px;
+}
+.bottom .promise {
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid #434343;
+    color: #fff;
+    font-size: 24px;
+}
+.bottom .promise .img1 {
+  position: relative;
+  left: 126px;
+  top: 16px;
+}
+.bottom .promise .img2 {
+    position: relative;
+    left: 420px;
+    top: 16px;
+}
+.bottom .promise .img3 {
+    position: relative;
+    left: 684px;
+    top: 16px;
+}
+.bottom .about {
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+}
+.bottom .about p:last-child {
+    margin-top: 25px;
+}
+/* 侧边栏 */
+aside {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #999;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+}
+aside .back {
+    bottom: 190px;
+}
+aside .APP {
+    bottom: 100px;
+}
+aside .service {
+    bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
